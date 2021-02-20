@@ -6,21 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lqqtwo.github.io">
-  <title>加盐的多拿滋的博客</title>
+  <title>51单片机产生PWM | 加盐的多拿滋的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="加盐的多拿滋的博客">
-<meta property="og:url" content="http://lqqtwo.github.io/index.html">
+  <meta name="description" content="PWM概念及相关量&amp;emsp;&amp;emsp;PWM控制——脉冲宽度调制技术，通过对一系列脉冲的宽度进行调制，来等效地获得所需要的波形（含形状和幅值）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="51单片机产生PWM">
+<meta property="og:url" content="http://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/index.html">
 <meta property="og:site_name" content="加盐的多拿滋的博客">
+<meta property="og:description" content="PWM概念及相关量&amp;emsp;&amp;emsp;PWM控制——脉冲宽度调制技术，通过对一系列脉冲的宽度进行调制，来等效地获得所需要的波形（含形状和幅值）。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/1.png">
+<meta property="og:image" content="http://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/2.png">
+<meta property="article:published_time" content="2021-02-20T09:30:51.000Z">
+<meta property="article:modified_time" content="2021-02-20T09:55:08.551Z">
 <meta property="article:author" content="加盐的多拿滋">
+<meta property="article:tag" content="51单片机">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/1.png">
   
     <link rel="alternative" href="/atom.xml" title="加盐的多拿滋的博客" type="application/atom+xml">
   
@@ -219,25 +223,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-51单片机产生PWM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-51单片机产生PWM" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/" target="_blank">51单片机产生PWM</a>
-  
+    <h1 class="article-title" itemprop="name">
+      51单片机产生PWM
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/" class="archive-article-date">
         <time datetime="2021-02-20T09:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-20</time>
 </a>
@@ -245,20 +249,92 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">657字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="PWM概念及相关量"><a href="#PWM概念及相关量" class="headerlink" title="PWM概念及相关量"></a>PWM概念及相关量</h1><p>&emsp;&emsp;PWM控制——脉冲宽度调制技术，通过对一系列脉冲的宽度进行调制，来等效地获得所需要的波形（含形状和幅值）。</p>
-    
-    <a class="article-more-a" href="/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/#more">more >></a>
-    
-    
+    <h1 id="PWM概念及相关量"><a href="#PWM概念及相关量" class="headerlink" title="PWM概念及相关量"></a>PWM概念及相关量</h1><p>&emsp;&emsp;PWM控制——脉冲宽度调制技术，通过对一系列脉冲的宽度进行调制，来等效地获得所需要的波形（含形状和幅值）。<a id="more"></a>对于方波，我们常用的几个参数分别是，幅度，周期，频率，占空比（即脉宽）。在单片机中，由于片上电压限制，各脉冲幅值相等，我们无法调节幅度，所以我们常常调节的参数为周期，频率，占空比。<br>&emsp;&emsp;周期就是一个脉冲所占的时间T，单位是s；频率是每秒有多少个周期f = 1/ T，周期和占空比只要一个变另一个就跟着变。<br>&emsp;&emsp;占空比是一个周期中脉宽时间（高电平时间）占整个周期时间的比值，我们调节占空比就是调节脉宽时间<br><img src="/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/1.png" alt="占空比概念"></p>
+<h1 id="产生PWM"><a href="#产生PWM" class="headerlink" title="产生PWM"></a>产生PWM</h1><p>&emsp;&emsp;在单片机中通过定时器设置初值我们可以得到我们想要的间隔时间，计数器在固定的间隔时间内不断累加。我们看下面的图，我们截取一个周期。<br><img src="/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/2.png" alt="描述"><br>&emsp;&emsp;从左往右，时间一刻不停，从T0到T1花费的是一个固定的时间，也就是说，计数器从T0固定的走了n次后到的T1，其中在P处电平由高到低，就是说在计数到k次且小于n时电平由高到低。<br>&emsp;&emsp;因为每次计数间隔时间相等，那么经过n次到T1的时间我们可求，同样的在何时电平从高到低也可求。<br>&emsp;&emsp;假设间隔时间t，经历计数次数为n，那么这样一个周期T = t * n，频率相应的为f = （t * n），而占空比我们只要我们从0开始，任取一周期n内的计数次数k作为高电平时间，剩下的时间即为低电平时间，占空比即为 k / n。<br>&emsp;&emsp;现在举个例子，要求频率1Khz占空比为50%的pwm波；<br>&emsp;&emsp;算出周期T = 1 / 1000 = 1ms，我们设置计数时间为0.01ms，那么我们需要经历n = 100次达到一个周期；占空比为50%，那么在计数至0.5 *100 = 50次时应将高电平置低。<br>&emsp;&emsp;同样设置计数时间为0.01,ms，如果频率变为2Kh那么相应的，那么周期为0.5ms，需要经历50次计数达到一个周期，在计数至25次时将高电平置低。<br>&emsp;&emsp;应该可以发现，计数间隔越短，控制越精细.</p>
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          加盐的多拿滋
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://lqqtwo.github.io/2021/02/20/51单片机产生PWM/" title="51单片机产生PWM" target="_blank">http://lqqtwo.github.io/2021/02/20/51单片机产生PWM/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -279,16 +355,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/02/18/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">什么是机器周期？怎么计算机器周期？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -303,190 +439,43 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是机器周期？怎么计算机器周期？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/18/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F/" target="_blank">什么是机器周期？怎么计算机器周期？</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/18/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F/" class="archive-article-date">
-        <time datetime="2021-02-18T13:22:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-18</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>  首先要明确一点，机器周期取决于硬件，不同构架下机器周期是不同的。</p>
-    
-    <a class="article-more-a" href="/2021/02/18/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">51单片机</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/18/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%99%A8%E5%91%A8%E6%9C%9F%EF%BC%9F/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PWM%E6%A6%82%E5%BF%B5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">PWM概念及相关量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A7%E7%94%9FPWM"><span class="toc-number">2.</span> <span class="toc-text">产生PWM</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-QuartusII-13-1的安装和破解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/17/QuartusII-13-1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%A0%B4%E8%A7%A3/" target="_blank">QuartusII-13.1的破解</a>
-  
-    </h1>
-  
 
-
-  
-  
-<a href="/2021/02/17/QuartusII-13-1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%A0%B4%E8%A7%A3/" class="archive-article-date">
-        <time datetime="2021-02-17T03:36:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>FPGA学习第一步，这里用的是正点原子开拓者开发板和教程，所以软件选择QuartusII-13.1</p>
-    
-    <a class="article-more-a" href="/2021/02/17/QuartusII-13-1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%A0%B4%E8%A7%A3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">FPGA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/17/QuartusII-13-1%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%A0%B4%E8%A7%A3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+<div id="SOHUCS" sid="51单片机产生PWM" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvjk2tlz",
+        conf: "a1f4bb8da6da8fb6bd5c00bad394fac3"
+    });
+</script>
+</script>
 
 
 
 
-  
-  
+
+
+
+
 
 
           </div>
@@ -526,8 +515,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
