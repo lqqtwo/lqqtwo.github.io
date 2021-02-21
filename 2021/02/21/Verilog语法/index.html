@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://lqqtwo.github.io/2021/02/21/Verilog%E8%AF%AD%E6%B3%95/9.png">
 <meta property="og:image" content="http://lqqtwo.github.io/2021/02/21/Verilog%E8%AF%AD%E6%B3%95/10.png">
 <meta property="article:published_time" content="2021-02-21T03:01:18.000Z">
-<meta property="article:modified_time" content="2021-02-21T09:38:09.414Z">
+<meta property="article:modified_time" content="2021-02-21T10:03:15.574Z">
 <meta property="article:author" content="加盐的多拿滋">
 <meta property="article:tag" content="FPGA">
 <meta name="twitter:card" content="summary">
@@ -388,48 +388,45 @@ else
     语句4;
 </code></pre>
 <ol>
-<li><p>允许一定形式的简写，如：<br>&emsp;&emsp;if(a) 等同于 if(a == 1)<br>&emsp;&emsp;if(!a)等同于 if(a != 1)</p>
-</li>
-<li><p>if语句对表达式的值进行判断，若为0,x,z，则按假处理；若为1，按真处理。</p>
-</li>
-<li><p>if和else后面的操作语句可以用begin和end包含多个语句。</p>
-<pre><code> if(a) begin
-     语句1;
-     语句2;
- end
- else begin
-     语句3;
-     if(!b)
-         语句4;
-     else
-         语句5;
- end        
-</code></pre>
-</li>
-<li><p>允许if语句的嵌套。</p>
-<h3 id="case语句（多分支选择语句）"><a href="#case语句（多分支选择语句）" class="headerlink" title="case语句（多分支选择语句）"></a>case语句（多分支选择语句）</h3><p> case(num)</p>
-<pre><code> 表达式1：   语句1；
- 表达式2：   语句2；
- .........
- default :  语句n；
-</code></pre>
-<p> endcase<br>其中，表达式称为分支表达式，语句成为控制表达式。</p>
-</li>
-<li><p>分支表达式的值互不相同；</p>
-</li>
-<li><p>所有表达式的位宽必须相等；不能用 ’bx 来代替 n’bx</p>
-</li>
-<li><p>casez。比较时，不考虑表达式中的高阻值</p>
-</li>
-<li><p>casex</p>
-<pre><code> reg [7:0] sel; //1100_0011
- casez(sel)
-     8’b1100_zzzz: 语句1;
-     8’b1100_xxzz: 语句2;
- endcase
-</code></pre>
-</li>
+<li>允许一定形式的简写，如：<br>&emsp;&emsp;if(a) 等同于 if(a == 1)<br>&emsp;&emsp;if(!a)等同于 if(a != 1)</li>
+<li>if语句对表达式的值进行判断，若为0,x,z，则按假处理；若为1，按真处理。</li>
+<li>if和else后面的操作语句可以用begin和end包含多个语句。</li>
 </ol>
+<pre><code>if(a) begin
+    语句1;
+    语句2;
+end
+else begin
+    语句3;
+if(!b)
+    语句4;
+else
+    语句5;
+end        
+</code></pre>
+<ol start="4">
+<li>允许if语句的嵌套。</li>
+</ol>
+<h3 id="case语句（多分支选择语句）"><a href="#case语句（多分支选择语句）" class="headerlink" title="case语句（多分支选择语句）"></a>case语句（多分支选择语句）</h3><pre><code>case(num)
+    表达式1：   语句1；
+    表达式2：   语句2；
+    .........
+    default :  语句n；
+endcase
+</code></pre>
+<p>其中，表达式称为分支表达式，语句成为控制表达式。</p>
+<ol>
+<li>分支表达式的值互不相同；</li>
+<li>所有表达式的位宽必须相等；不能用 ’bx 来代替 n’bx</li>
+<li>casez。比较时，不考虑表达式中的高阻值</li>
+<li>casex</li>
+</ol>
+<pre><code>reg [7:0] sel; //1100_0011
+casez(sel)
+    8’b1100_zzzz: 语句1;
+    8’b1100_xxzz: 语句2;
+endcase
+</code></pre>
 
     
 
