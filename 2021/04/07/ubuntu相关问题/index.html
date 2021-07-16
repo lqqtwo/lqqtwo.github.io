@@ -6,38 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lqqtwo.github.io">
-  <title>基于51/32单片机的2/3/4轮循迹避障小车的设计 | 加盐的多拿滋的博客</title>
+  <title>ubuntu相关问题 | 加盐的多拿滋的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;其实不管用什么单片机，控制几轮的小车做循迹运动，原理都是相通的，并没有说有什么过于特殊的地方。很多新手做小车比赛或者说接到需要用到小车的项目的时候都会有发懵，这小车看起来很难的样子，咋做呀？然后查一堆资料，百度或csdn看两篇博客，找两份源码，最后还是懵。很正常，接触新东西的正常反应，更何况有些同学在基础上都不怎么牢固。接下来是我制作循迹小车时的思考过程，多少有点先入为主，">
+  <meta name="description" content="系统操作常用命令更新源：sudo apt-get update更新以安装的包：sudo apt-get upgrade升级系统： sudo apt-get dist-upgrade清理无用的包: sudo apt-get clean &amp;&amp; sudo apt-get autoclean检查是否有损坏的依赖: sudo apt-get check  shell常用命令显示当前目录下的文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于51&#x2F;32单片机的2&#x2F;3&#x2F;4轮循迹避障小车的设计">
-<meta property="og:url" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:title" content="ubuntu相关问题">
+<meta property="og:url" content="http://lqqtwo.github.io/2021/04/07/ubuntu%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="加盐的多拿滋的博客">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;其实不管用什么单片机，控制几轮的小车做循迹运动，原理都是相通的，并没有说有什么过于特殊的地方。很多新手做小车比赛或者说接到需要用到小车的项目的时候都会有发懵，这小车看起来很难的样子，咋做呀？然后查一堆资料，百度或csdn看两篇博客，找两份源码，最后还是懵。很正常，接触新东西的正常反应，更何况有些同学在基础上都不怎么牢固。接下来是我制作循迹小车时的思考过程，多少有点先入为主，">
+<meta property="og:description" content="系统操作常用命令更新源：sudo apt-get update更新以安装的包：sudo apt-get upgrade升级系统： sudo apt-get dist-upgrade清理无用的包: sudo apt-get clean &amp;&amp; sudo apt-get autoclean检查是否有损坏的依赖: sudo apt-get check  shell常用命令显示当前目录下的文">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/1.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/2.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/3.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/4.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/5.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/6.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/7.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/8.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/9.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/10.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/11.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/12.png">
-<meta property="og:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/13.png">
-<meta property="article:published_time" content="2021-03-05T11:01:37.000Z">
-<meta property="article:modified_time" content="2021-03-07T08:47:03.795Z">
+<meta property="article:published_time" content="2021-04-07T12:20:07.000Z">
+<meta property="article:modified_time" content="2021-04-08T01:53:38.343Z">
 <meta property="article:author" content="加盐的多拿滋">
-<meta property="article:tag" content="51单片机">
-<meta property="article:tag" content="stm32">
-<meta property="article:tag" content="小项目">
+<meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/1.png">
   
     <link rel="alternative" href="/atom.xml" title="加盐的多拿滋的博客" type="application/atom+xml">
   
@@ -236,14 +220,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-基于51-32单片机的2-3-4轮循迹避障小车的设计" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ubuntu相关问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      基于51/32单片机的2/3/4轮循迹避障小车的设计
+      ubuntu相关问题
     </h1>
   
 
@@ -255,8 +239,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="archive-article-date">
-        <time datetime="2021-03-05T11:01:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
+<a href="/2021/04/07/ubuntu%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2021-04-07T12:20:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-07</time>
 </a>
 
   
@@ -269,7 +253,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">2.6k字</span>
+      <span class="post-count">90字</span>
     </span>
   </span>
 
@@ -278,7 +262,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">9分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -289,49 +273,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>&emsp;&emsp;其实不管用什么单片机，控制几轮的小车做循迹运动，原理都是相通的，并没有说有什么过于特殊的地方。很多新手做小车比赛或者说接到需要用到小车的项目的时候都会有发懵，这小车看起来很难的样子，咋做呀？然后查一堆资料，百度或csdn看两篇博客，找两份源码，最后还是懵。很正常，接触新东西的正常反应，更何况有些同学在基础上都不怎么牢固。接下来是我制作循迹小车时的思考过程，多少有点先入为主，仅供参考。</p>
-<span id="more"></span>
-<h1 id="确定功能"><a href="#确定功能" class="headerlink" title="确定功能"></a>确定功能</h1><p>&emsp;&emsp;解决问题的方法有很多，大多数无非就是正推逆推，而给到我们手上的大多时候是赛制或者项目要求，这样我们就应该根据功能来逆推我们需要做哪些工作。<br>&emsp;&emsp;比如我现在仅需要实现的是基础的循迹避障小车。那么自然需要的功能就是循迹避障了吧？是的，主要功能就是循迹避障，但是我在交流的时候发现一个问题，就是有些同学过于去关注循迹和避障而忽略了最基础的功能”小车”！我们首先要做一辆小车，让它跑起来才能在这基础上实现循迹和避障，否者一切都是空谈。当小车跑起来了，再来思考循迹和避障，发现避障又是以循迹为基础的。<br>&emsp;&emsp;所以我们真正需要实现的功能按先后顺序有：小车，循迹，避障。</p>
-<h1 id="小车"><a href="#小车" class="headerlink" title="小车"></a>小车</h1><p>&emsp;&emsp;制作一台能动的小车，外形和动力结构不能少，用什么主控相比都应该有定数，就不需要多说了</p>
-<h2 id="确定结构"><a href="#确定结构" class="headerlink" title="确定结构"></a>确定结构</h2><p>&emsp;&emsp;单片机小车一般有两轮的，三轮的还有四轮的，两轮的平衡车，三轮的其中一个是万向轮，四轮的就很常规，基本都是使用差速转向，少数采用舵机转向。这里采用的是常规三轮结构，即两个驱动轮加一个万向轮，使用差速转向。大概长下面这样子<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/1.png" alt="结构"></p>
-<h2 id="小车驱动"><a href="#小车驱动" class="headerlink" title="小车驱动"></a>小车驱动</h2><p>&emsp;&emsp;结构确定了我们只需要驱动两个轮子，那么仅需使用一个L298N模块，L298N是最常用的电机驱动模块了吧，可同时驱动两个电机或一个步进电机，完全满足三轮小车的使用。当然还要电机的选择，这里减速比什么的就不过多赘述了，这里是新手向的教程，而新手只需淘宝三轮小车套件即可。<br>&emsp;&emsp;常用的L298N模块和各个引脚对应的功能如下图<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/2.png" alt="L298N"></p>
-<h3 id="模块供电"><a href="#模块供电" class="headerlink" title="模块供电"></a>模块供电</h3><p>&emsp;&emsp;供电部分最好使用+7 —— +35V的电源对驱动板进行供电，此时接入标注为+12V的端口，+5v端口作为输出使用。<br>&emsp;&emsp;当然很多小车套件都会有一个四电池的电池盒，如果想仅用4颗电池进行供电也不是不可以，但是要注意，电源正极需要同时接12V供电和5V供电口，为什么要这么做，简单来说因为4*1.5带来的6v电压不足以让板载的LM7805芯片工作，因此板上没有5v提供给电机控制脚IN1-4，而刚好5v端口连接着电机控制脚，所以必须+12V和+5V两个端口同时接。<br>&emsp;&emsp;可能又有同学要问了，不是说最低要+7V，6V接到12V的端口能用？<br>&emsp;&emsp;这就涉及到了模块设计和L298N的特性问题。之所以模块要求+7全然是为了板载的LM7805做打算，这种接线方式就是完全放弃了板载的LM7805模块。对于本身最重要的的L298N而言6V完全够用，如下图,并且在模块电路设计上+12V的端口直接与L298n的VS端口相连（参照原理图），完全不存在不能用的情况。<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/3.png" alt="特性"><br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/4.png" alt="原理图"><br>&emsp;&emsp;不过这种方式有很大问题，干电池的容量太低，所以用不了多久就要换电池，十分不友好，所以还是建议使用+7 —— +35v的可充电电池输入。</p>
-<h3 id="驱动模式"><a href="#驱动模式" class="headerlink" title="驱动模式"></a>驱动模式</h3><p>&emsp;&emsp;L298N的控制方式及直流电机状态表如下：<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/5.png" alt="状态"><br>&emsp;&emsp;由于小车只需维持前进，使用pwm调速可以用两种方式。一是设置IN1和IN2，确定电机的转动方向，然后对使能端输出pwm实现调速，这种方式也是比较推荐的方式。二是保持使能端为高电平有效，通过对IN端输出pwm进行调速。<br>&emsp;&emsp;51单片机的pwm输出原理可参考：<a href="https://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/">https://lqqtwo.github.io/2021/02/20/51%E5%8D%95%E7%89%87%E6%9C%BA%E4%BA%A7%E7%94%9FPWM/</a></p>
-<h1 id="循迹"><a href="#循迹" class="headerlink" title="循迹"></a>循迹</h1><p>&emsp;&emsp;在不用摄像头的情况下，现今主流的循迹模式有两种，黑白线循迹和电磁循迹。两者其实大同小异，只是在前段采集路径信息的时候有不同，循迹的逻辑还是一样的。黑白线循迹一般是小车沿着宽度为2cm的黑线行进，使用红外模块进行循迹；电磁循迹是场地下埋有通电导线，使用电感加比较器判断线路进行循迹。这里用三路红外循迹模块阐述。</p>
-<h2 id="红外循迹原理"><a href="#红外循迹原理" class="headerlink" title="红外循迹原理"></a>红外循迹原理</h2><p>&emsp;&emsp;一路红外模块具有一对红外线发射与接收管，发射管发射出一定频率的红外线，当检测方向遇到障碍物（反射面）时，红外线反射回来被接 收管接收，经过比较器电路处理之后，指示灯会亮起，同时信号输出接口输出数字信号（一般是一个低电平信号也有特殊情况，看传感器手册）<br>&emsp;&emsp;黑白线循迹时，当处在白色部分，发射的红外线可以被接收管接收，模块输出口为高电平，处在黑线上时红外光被黑线吸收则无法接收或仅接收到少量红外光，模块输出口为低电平，指示灯亮起。</p>
-<h2 id="直行"><a href="#直行" class="headerlink" title="直行"></a>直行</h2><p>&emsp;&emsp;如下图为小车直行的情况<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/6.png" alt="直行"><br>&emsp;&emsp;L-C-R分别为小车端的左中右三个红外模块。直行时C端接触黑线，此时L-C-R的电平为1-0-1；</p>
-<h2 id="转向"><a href="#转向" class="headerlink" title="转向"></a>转向</h2><p>&emsp;&emsp;使用pwm控制L298N的ENA/ENB转向，只需使用差速，即一边轮子速度快一边轮子速度慢即可完成转向，左转：左快右慢；右转：左慢右快。</p>
-<h3 id="左转"><a href="#左转" class="headerlink" title="左转"></a>左转</h3><p>&emsp;&emsp;下图为左转的情况<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/7.png" alt="左转"><br>&emsp;&emsp;左转时R端接触黑线，此时L-C-R的电平为1-1-0；</p>
-<h3 id="右转"><a href="#右转" class="headerlink" title="右转"></a>右转</h3><p>&emsp;&emsp;下图为右转的情况<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/8.png" alt="右转"><br>&emsp;&emsp;右转时L端接触黑线，此时L-C-R的电平为0-1-1；</p>
-<h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2><p>&emsp;&emsp;特殊情况1：RC接触黑线<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/9.png" alt="特1"><br>&emsp;&emsp;特殊情况2：LC接触黑线<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/10.png" alt="特2"><br>&emsp;&emsp;上述两种情况都属于转向的特殊情况，容易被C端误导，但是总归是要转向的吧，那C端接触黑线或不接触又有什么区别呢，只要L/R端接触了，符合左转或右转的情况就ok了，照常左转右转就成。<br>&emsp;&emsp;特殊情况3：LCR接触黑线<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/11.png" alt="特3"><br>&emsp;&emsp;这个情况根据项目需求来定，直行或停止均可。</p>
-<h2 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h2><p>&emsp;&emsp;循迹小车要求沿着黑线前进，那么直行时一直沿着黑线只需保持状态即可；转向时，为了沿着黑线行进，可以预见，无论左转还是右转总是趋向于仅C端接触黑线，即电平L-C-R的电平为1-0-1的情况。那么当需要转向时我们只需持续转向直到处于仅C端接触黑线（直行状态）即可。那么直行就为常规状态而转向为特殊状态，用两种条件代码表现为：</p>
-<pre><code>用if语句实现
-if(R==0)            //如果检测到R端接触左转：
-&#123;
-    while(R==0)     //只要R端接触持续右转
-        turn_left;
-&#125;
-else if(L==0)       //如果检测到L端接触右转：
-&#123;
-    while(L==0)     //如果检测到R端接触右转：
-        turn_right;
-&#125;
-else Straight；     //其他情况直行
-
-用case语句实现
-假设L-C-R分别接P1^0,P1^1,P1^2。P1口其他脚置空。
-那么直行P1状态0000_0101，即P1=0X05;左转P1状态0000_0011，即P1=0X03;右转P1状态0000_0110，即P1=0X06。
-Key=P1;
-case(Key)
-&#123;
-    0X03: turn_left;break;
-    0X06: turn_right;break;
-    ...........
-    default: Straight;
-&#125;
-</code></pre>
-<h1 id="避障"><a href="#避障" class="headerlink" title="避障"></a>避障</h1><p>&emsp;&emsp;小车避障一般使用红外避障或超声波避障。红外避障简单，但是易受到环境光的影响；超声波避障麻烦些，受到环境的影响较小。这里的麻烦指的是代码上的麻烦，可看具体项目情况选用。这里选用红外模块阐述。<br>&emsp;&emsp;一般避障传感器都放置在车头部分，障碍物放置都在直线部分。这里仅用在直线道路上放置一个障碍物进行说明；<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/12.png" alt="障碍"><br>&emsp;&emsp;前置红外检测到障碍物后可进行转向绕过障碍物即可，这需要多次测试延时。<br>&emsp;&emsp;所以我推荐使用最少两个红外传感器，且检测障碍物的传感器置于小车左上或右上，如图为左上：<br><img src="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/13.png" alt="障碍2"><br>&emsp;&emsp;当探测1检测到离小车30cm的障碍物时右转，直到探测1检测不到障碍物为止，此时可认为直行不会碰撞到障碍物。直行到达点1，此时探测2检测到障碍物，可认为已经避过障碍物（如果觉得不保险可以把探测2放在车屁股），左转回到道路上，即点2。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;搞小车主要是逻辑，当你做的小车能跑完全程，熟悉了基本逻辑，就可以上编码器，学一学pid算法，平衡车就必须使用pid了。在搞小项目或者比赛的时候积累经验，按照一定的逻辑去完成需要办的事，遇事不慌神。</p>
+    <h1 id="系统操作常用命令"><a href="#系统操作常用命令" class="headerlink" title="系统操作常用命令"></a>系统操作常用命令</h1><p>更新源：sudo apt-get update<br>更新以安装的包：sudo apt-get upgrade<br>升级系统： sudo apt-get dist-upgrade<br>清理无用的包: sudo apt-get clean &amp;&amp; sudo apt-get autoclean<br>检查是否有损坏的依赖: sudo apt-get check </p>
+<h1 id="shell常用命令"><a href="#shell常用命令" class="headerlink" title="shell常用命令"></a>shell常用命令</h1><p>显示当前目录下的文件ls -a(所有文件) -l（详细信息）</p>
 
     
 
@@ -378,7 +321,7 @@ case(Key)
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://lqqtwo.github.io/2021/03/05/基于51-32单片机的2-3-4轮循迹避障小车的设计/" title="基于51/32单片机的2/3/4轮循迹避障小车的设计" target="_blank">http://lqqtwo.github.io/2021/03/05/基于51-32单片机的2-3-4轮循迹避障小车的设计/</a>
+          <a href="http://lqqtwo.github.io/2021/04/07/ubuntu相关问题/" title="ubuntu相关问题" target="_blank">http://lqqtwo.github.io/2021/04/07/ubuntu相关问题/</a>
         </li>
         
         <li>
@@ -400,15 +343,7 @@ case(Key)
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">51单片机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">stm32</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小项目</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		
 		</ul>
@@ -464,7 +399,7 @@ case(Key)
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://lqqtwo.github.io/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://lqqtwo.github.io/2021/04/07/ubuntu%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -479,18 +414,9 @@ case(Key)
 
 <nav id="article-nav">
   
-    <a href="/2021/04/07/ubuntu%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ubuntu相关问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/02/21/Verilog%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Verilog语法</div>
+    <a href="/2021/03/05/%E5%9F%BA%E4%BA%8E51-32%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%842-3-4%E8%BD%AE%E5%BE%AA%E8%BF%B9%E9%81%BF%E9%9A%9C%E5%B0%8F%E8%BD%A6%E7%9A%84%E8%AE%BE%E8%AE%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于51/32单片机的2/3/4轮循迹避障小车的设计</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -517,7 +443,7 @@ case(Key)
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E5%8A%9F%E8%83%BD"><span class="toc-number">1.</span> <span class="toc-text">确定功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E8%BD%A6"><span class="toc-number">2.</span> <span class="toc-text">小车</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">确定结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E8%BD%A6%E9%A9%B1%E5%8A%A8"><span class="toc-number">2.2.</span> <span class="toc-text">小车驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E4%BE%9B%E7%94%B5"><span class="toc-number">2.2.1.</span> <span class="toc-text">模块供电</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.2.</span> <span class="toc-text">驱动模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AA%E8%BF%B9"><span class="toc-number">3.</span> <span class="toc-text">循迹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%A2%E5%A4%96%E5%BE%AA%E8%BF%B9%E5%8E%9F%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">红外循迹原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E8%A1%8C"><span class="toc-number">3.2.</span> <span class="toc-text">直行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E5%90%91"><span class="toc-number">3.3.</span> <span class="toc-text">转向</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A6%E8%BD%AC"><span class="toc-number">3.3.1.</span> <span class="toc-text">左转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E8%BD%AC"><span class="toc-number">3.3.2.</span> <span class="toc-text">右转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="toc-number">3.4.</span> <span class="toc-text">特殊情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BC%E5%90%88"><span class="toc-number">3.5.</span> <span class="toc-text">综合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%81%BF%E9%9A%9C"><span class="toc-number">4.</span> <span class="toc-text">避障</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">系统操作常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shell%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">shell常用命令</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -530,7 +456,7 @@ case(Key)
 
 
 
-<div id="SOHUCS" sid="基于51-32单片机的2-3-4轮循迹避障小车的设计" ></div> 
+<div id="SOHUCS" sid="ubuntu相关问题" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

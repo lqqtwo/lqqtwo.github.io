@@ -276,7 +276,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>  首先要明确一点，机器周期取决于硬件，不同构架下机器周期是不同的。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="先了解两个概念：时钟周期和分频"><a href="#先了解两个概念：时钟周期和分频" class="headerlink" title="先了解两个概念：时钟周期和分频"></a>先了解两个概念：时钟周期和分频</h2><p>时钟周期：时钟周期也称为振荡周期，定义为时钟频率的倒数。时钟周期是计算机中最基本的、最小的时间单位。T = 1/ f；<br>知道了时钟周期我们就可以讨论分频了，在51单片机中，出现一个叫12分频的概念。我们都知道振荡时钟是以方波的形式表达，12分频用白话来说就是每12个最小周期记一次。</p>
 <h2 id="什么是机器周期？"><a href="#什么是机器周期？" class="headerlink" title="什么是机器周期？"></a>什么是机器周期？</h2><p>再来看机器周期，机器周期也称为CPU周期。在计算机中，为了便于管理，常把一条指令的执行过程划分为若干个阶段（如取指、译码、执行等），每一阶段完成一个基本操作。完成一个基本操作所需要的时间称为机器周期。51单片机采用12分频的形式，就是以12个时钟（振荡）周期作为一个时钟周期。</p>
 <h2 id="怎么计算机器周期？"><a href="#怎么计算机器周期？" class="headerlink" title="怎么计算机器周期？"></a>怎么计算机器周期？</h2><p>这样就清楚了，以12m晶振为例，一个时钟周期为T = 1/12 us，机器周期为T（机）=T*12=1us。<br>很多地方，都喜欢把12分频直接说成外部12M，内部时钟称为1M这时候相当于所有机器周期除以12，已经把12分频这个工作做了，这时候就不需要再乘12，直接就是T（机）= 1 / 1 = 1 us</p>
@@ -619,6 +619,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">FPGA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">

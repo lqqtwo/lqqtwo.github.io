@@ -285,7 +285,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>Verilog HDL（简称 Verilog ）是一种硬件描述语言，用于数字电路的系统设计。可对算法级、门级、开关级等多种抽象设计层次进行建模。所以基础知识还是遵循数字电路的知识，数电基础还要加强。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="逻辑值"><a href="#逻辑值" class="headerlink" title="逻辑值"></a>逻辑值</h2><p>0：低电平，对应GND<br>1：高电平，对应VCC<br>X：未知，有可能是高电平，也可能是低电平（有输入）<br>Z：高阻态，外部没有激励信号，悬空状态（无输入）<br><img src="/2021/02/21/Verilog%E8%AF%AD%E6%B3%95/1.png" alt="逻辑值"></p>
 <h2 id="数字进制格式"><a href="#数字进制格式" class="headerlink" title="数字进制格式"></a>数字进制格式</h2><p>Verilog数字进制格式包括二进制(b)、八进制(o)、十进制(d)和十六进制(h)。<br>一般常用的为二进制、十进制和十六进制。<br>二进制表示如下：4’b0101 表示4位二进制数字0101（4–位宽；b:进制号；）<br>十进制表示如下：4’d2 表示4位十进制数字2（这里4表示转换成二进制0010时的位宽）<br>十六进制表示如下：4’ha 表示4位十六进制数字a（同理：二进制1010）<br>进制格式的转换遵循的是数字电路形式</p>
 <h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>用于定义模块名、端口名、信号名（相当于万金油型变量名）<br>标识符可以是任意一组字母、数字、$符号和_(下划线)符号的组合；<br>但标识符的第一个字符必须是字母或者下划线；<br>标识符是区分大小写的；</p>
@@ -763,6 +763,10 @@ endcase
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">FPGA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
